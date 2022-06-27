@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "author": "Bruno Sezar M. Aiolfi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

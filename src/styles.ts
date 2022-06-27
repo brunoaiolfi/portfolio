@@ -17,11 +17,15 @@ export const BodyContainer = styled.div`
   width: 100%;
 
   margin-top: 5rem;
-  padding: 0 8%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 `;
 
 export const PageContainer = styled.article`
   width: 100%;
-
+  max-width: 1080px;
   height: calc(100vh - 5rem);
 `;

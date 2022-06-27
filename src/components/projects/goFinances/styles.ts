@@ -1,3 +1,4 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -12,14 +13,9 @@ export const ContentWrapper = styled.div`
   display: flex;
 
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
-  gap: 3rem;
-
-  .swiper {
-    height: 90%;
-    width: 30rem;
-  }
+  gap: 2rem;
 `;
 
 export const TitleWrapper = styled.header`
@@ -33,6 +29,7 @@ export const Title = styled.h1`
 `;
 
 export const ProjectWrapper = styled.section`
+  width: auto;
   display: flex;
   flex-direction: column;
 
@@ -54,12 +51,62 @@ export const ProjectText = styled.h1`
   }
 `;
 
-export const CarouselCard = styled.img`
-  height: 100%;
-  max-height: 25rem;
-  width: 16rem;
+export const CarouselContainer = styled.div`
+  display: flex;
 
-  border: 1px solid red;
-  border-radius: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 1rem;
+`;
+
+export const Carousel = styled(Swiper)`
+  height: 100%;
+  max-height: 30rem;
+  width: 18rem;
+
+  margin-right: -2rem;
 
 `;
+
+export const CarouselCard = styled.img`
+  height: 100%;
+  max-height: 30rem;
+  width: 15rem;
+
+  margin-right: 3rem;
+  border-radius: 1rem;
+`;
+
+export const SwipeDescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+
+  span {
+    font-size: 2.5rem;
+    transform-origin: bottom center;
+    animation: hello 1.8s ease-in-out 0s infinite;
+  }
+
+  @keyframes hello {
+    0%,
+    100% {
+      transform: rotate(0.05turn);
+    }
+    50% {
+      transform: rotate(-0.05turn);
+    }
+  }
+`;
+export const SwipeText = styled.h1``;

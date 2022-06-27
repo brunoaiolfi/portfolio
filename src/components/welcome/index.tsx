@@ -2,6 +2,7 @@ import React from "react";
 import {
   Container,
   ContentWrapper,
+  HelloHand,
   Languages,
   MessageContainer,
   Presentation,
@@ -9,7 +10,6 @@ import {
   WellcomeMessage,
 } from "./styles";
 
-// ** Por algum motivo ta alegando erro de tipagem
 // @ts-ignore
 import { ReactComponent as ProgrammerSvg } from "../../assets/svgs/Programmer.svg";
 
@@ -18,7 +18,10 @@ export function Welcome() {
     <Container>
       <ContentWrapper>
         <MessageContainer>
-          <WellcomeMessage>👋 Bem-vindo(a)!</WellcomeMessage>
+          <HelloHand>👋</HelloHand>
+          <WellcomeMessage>
+            Bem-vindo(a)!
+          </WellcomeMessage>
 
           <Presentation>
             Sou o Bruno, <br />

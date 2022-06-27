@@ -19,6 +19,7 @@ export const Container = styled.div`
 
   header {
     width: 100%;
+    max-width: 1080px;
     height: 100%;
 
     display: flex;
@@ -30,11 +31,10 @@ export const Container = styled.div`
     }
 
     article {
-      display: flex;
-      gap: 3rem;
-
-      width: auto;
       height: 100%;
+      display: flex;
+      gap: 1rem;
+
     }
   }
 `;

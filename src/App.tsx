@@ -1,8 +1,10 @@
 import React from "react";
+import { Carrer } from "./components/carrer";
 import { Header } from "./components/header";
 import { Aiol } from "./components/projects/aiol";
 import { GoFinances } from "./components/projects/goFinances";
 import { Nlw } from "./components/projects/nlw";
+import { Skills } from "./components/skills";
 import { Welcome } from "./components/welcome";
 import { GlobalStyle } from "./global/styles/global";
 import "./global/styles/global.ts";
@@ -38,6 +40,14 @@ function App() {
         
         <PageContainer>
           <Nlw />
+        </PageContainer>
+        
+        <PageContainer>
+          <Skills />
+        </PageContainer>
+      
+        <PageContainer>
+          <Carrer />
         </PageContainer>
 
       </BodyContainer>
