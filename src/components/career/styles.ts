@@ -21,7 +21,7 @@ export const ContentWrapper = styled.div`
   margin-bottom: -6rem;
 `;
 
-export const MessageContainer = styled.section`
+export const CareerDescriptionContainer = styled.section`
   display: flex;
 
   flex-direction: column;
@@ -29,27 +29,31 @@ export const MessageContainer = styled.section`
   gap: 1rem;
 `;
 
-export const WellcomeMessage = styled.p`
+export const Industry = styled.p`
   font-size: 2rem;
+  color: var(--cyan_500);
   font-weight: bold;
 `;
 
-export const HelloHand = styled.span`
+export const Flag = styled.span`
   font-size: 3rem;
-  transform-origin: bottom center;
-  animation: hello 1.8s ease-in-out 0s infinite;
+  
+`;
+export const Rocket = styled.span`
+  font-size: 3rem;
+  animation: rocket 1.8s ease-in-out 0s infinite;
 
-  @keyframes hello {
+  @keyframes rocket {
     0%,
     100% {
-      transform: rotate(-0.005turn);
+      transform: rotate(-0.001turn);
     }
     50% {
-      transform: rotate(0.005turn);
+      transform: rotate(0.01turn);
     }
   }
 `;
-export const Presentation = styled.h1`
+export const WorkDescription = styled.h1`
   font-size: 4rem;
   font-weight: bold;
 `;

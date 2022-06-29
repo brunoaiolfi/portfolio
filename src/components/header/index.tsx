@@ -27,6 +27,7 @@ export function Header({ pageOnView }: headerProps) {
             <p>Contato</p>
           </SectionHeader>
         </article>
+
       </header>
     </Container>
   );

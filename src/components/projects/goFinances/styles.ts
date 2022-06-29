@@ -14,6 +14,7 @@ export const ContentWrapper = styled.div`
 
   align-items: center;
   justify-content: space-around;
+  margin-top: 1rem;
 
   gap: 2rem;
 `;
@@ -72,10 +73,10 @@ export const Carousel = styled(Swiper)`
 
 export const CarouselCard = styled.img`
   height: 100%;
-  max-height: 30rem;
   width: 15rem;
 
   margin-right: 3rem;
+  margin-top: 1rem;
   border-radius: 1rem;
 `;
 

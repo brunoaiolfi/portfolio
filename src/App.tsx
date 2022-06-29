@@ -1,5 +1,6 @@
 import React from "react";
-import { Carrer } from "./components/carrer";
+import { Career } from "./components/career";
+import { Contacts } from "./components/contacts";
 import { Header } from "./components/header";
 import { Aiol } from "./components/projects/aiol";
 import { GoFinances } from "./components/projects/goFinances";
@@ -11,6 +12,7 @@ import "./global/styles/global.ts";
 import {
   BodyContainer,
   Container,
+  FooterWrapper,
   HeaderContainer,
   PageContainer,
 } from "./styles";
@@ -37,22 +39,27 @@ function App() {
         <PageContainer>
           <Aiol />
         </PageContainer>
-        
+
         <PageContainer>
           <Nlw />
         </PageContainer>
-        
+
         <PageContainer>
           <Skills />
         </PageContainer>
-      
+
         <PageContainer>
-          <Carrer />
+          <Career />
         </PageContainer>
 
+
       </BodyContainer>
-      
-    </Container>  
+
+      <FooterWrapper>
+          <Contacts />
+      </FooterWrapper>
+
+    </Container>
   );
 }
 

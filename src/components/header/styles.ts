@@ -13,13 +13,13 @@ export const Container = styled.div`
   height: 5rem;
 
   background-color: var(--gray_900);
-  border-bottom: 1px solid #29292e;
-
-  padding: 0 8%;
+  border-bottom: 1px solid var(--gray_600);
 
   header {
     width: 100%;
+
     max-width: 1080px;
+
     height: 100%;
 
     display: flex;
@@ -28,13 +28,45 @@ export const Container = styled.div`
 
     h1 {
       font-size: 1.5rem;
+
+      margin-left: 5%;
     }
 
     article {
       height: 100%;
       display: flex;
       gap: 1rem;
+    }
 
+    @media only screen and (max-width: 1040px) {
+      /* For laptop: */
+      article {
+        position: absolute;
+
+        top: 4.9rem;
+
+        background-color: var(--gray_900);
+
+        width: 100%;
+
+        padding: 0 5%;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      /* For tablets: */
+
+      article {
+        position: absolute;
+
+        top: 4.9rem;
+
+        background-color: var(--gray_900);
+
+        width: 100%;
+
+        padding: 0 5%;
+      }
     }
   }
 `;
