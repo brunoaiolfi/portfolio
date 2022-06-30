@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,33 +10,26 @@ export const Container = styled.div`
   height: 100%;
 `;
 
-export const ContentWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: left;
-
-  gap: 3rem;
-
-  width: 100%;
-  height: 100%;
-
-  margin-bottom: -6rem;
+export const TitleWrapper = styled.section`
+  text-align: center;
 `;
 
-export const ContactsContainer = styled.section`
-  display: flex;
-
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-
-  width: 50%;
-  gap: 1rem;
-`;
 
 export const Title = styled.p`
   font-size: 2rem;
+  width: auto;
+
   font-weight: bold;
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    font-size: 1.75rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    font-size: 1.75rem;
+  }
 `;
 
 export const Phone = styled.span`
@@ -59,12 +51,21 @@ export const Phone = styled.span`
       transform: rotate(5deg);
     }
   }
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    font-size: 2rem;
+  }
 `;
 
 export const ContactsButtonContainer = styled.section`
-
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
 
+  margin-top: 1rem;
+  gap: 2.5rem;
 `;

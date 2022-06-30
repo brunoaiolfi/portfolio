@@ -6,12 +6,12 @@ import {
   Languages,
   MessageContainer,
   Presentation,
+  ProgrammerSVG,
   ScrollDown,
   WellcomeMessage,
 } from "./styles";
 
 // @ts-ignore
-import { ReactComponent as ProgrammerSvg } from "../../assets/svgs/Programmer.svg";
 
 export function Welcome() {
   return (
@@ -37,8 +37,9 @@ export function Welcome() {
           </Languages>
         </MessageContainer>
 
-        <ProgrammerSvg />
+        <ProgrammerSVG />
       </ContentWrapper>
+
       <ScrollDown>
         <div />
       </ScrollDown>

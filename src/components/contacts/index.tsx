@@ -2,63 +2,50 @@ import React from "react";
 import { ContactButton, ContactButtonProps } from "./contactButton";
 import {
   Container,
-  ContentWrapper,
   Phone,
-  ContactsContainer,
   ContactsButtonContainer,
   Title,
+  TitleWrapper,
 } from "./styles";
 
 
 export function Contacts() {
   const contactsList: ContactButtonProps[] = [
     {
-      contact: 'bruno.aiolfi154@gmail.com',
       contactType: 'email',
       icon: 'https://img.icons8.com/color/48/000000/gmail.png',
-      onClick: () => openEmail(),
+      link: "mailto:bruno.aiolfi154@gmail.com",
     },
     {
-      contact: '+55 48 98806-0117',
       contactType: 'whatsapp',
       icon: 'https://img.icons8.com/color/48/000000/whatsapp.png',
-      onClick: () => openWhatsApp(),
+      link: 'https://wa.me/88060117',
     },
+   
   ]
-
-  function openEmail() {
-    window.location.href = "mailto:bruno.aiolfi154@gmail.com"
-  }
-  function openWhatsApp() {
-    window.location.href = 'https://wa.me/88060117'
-  }
 
   return (
     <Container>
-      <ContentWrapper>
+      <TitleWrapper>
         <Phone>☎️</Phone>
-        <ContactsContainer>
+        <Title>
+          Entre em contato
+        </Title>
+      </TitleWrapper>
 
-          <Title>
-            Contatos
-          </Title>
+      <ContactsButtonContainer>
 
-          <ContactsButtonContainer>
+        {
+          contactsList.map(({
+             contactType, icon, link
+          }) =>
+            <ContactButton key={link} contactType={contactType} icon={icon} link={link} />
+          )
+        }
 
-            {
-              contactsList.map(({
-                contact, contactType, icon, onClick
-              }) =>
-                <ContactButton key={contact} contact={contact} contactType={contactType} icon={icon} onClick={onClick} />
-              )
-            }
-
-          </ContactsButtonContainer>
+      </ContactsButtonContainer>
 
 
-        </ContactsContainer>
-
-      </ContentWrapper>
     </Container>
   );
 }

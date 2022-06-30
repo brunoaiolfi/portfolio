@@ -1,18 +1,16 @@
 import React from "react";
 
 import {
-  CarouselCard,
+  AIOLLandingPage,
   Container,
   ContentWrapper,
   ProjectText,
   ProjectTitle,
   ProjectWrapper as ProjectDescriptionWrapper,
-  Title,
-  TitleWrapper,
 } from "./styles";
 
 import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 
 export function Aiol() {
   return (
@@ -21,7 +19,7 @@ export function Aiol() {
         <ProjectDescriptionWrapper>
           <ProjectTitle>AIOL</ProjectTitle>
           <ProjectText>
-            Controle de vendas. <br />
+            Controle de vendas e estoque. <br />
             <br />
             <span>
               👉 <a href="https://github.com/brunoaiolfi/AIOL">/AIOL</a> 👈
@@ -29,7 +27,7 @@ export function Aiol() {
           </ProjectText>
         </ProjectDescriptionWrapper>
 
-        <CarouselCard />
+        <AIOLLandingPage />
       </ContentWrapper>
     </Container>
   );

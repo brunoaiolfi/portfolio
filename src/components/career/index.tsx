@@ -2,13 +2,13 @@ import React from "react";
 import {
   Container,
   ContentWrapper,
-  Rocket,
-  Languages,
+  EmojiWithAnimation,
+  Time,
   CareerDescriptionContainer,
-  WorkDescription,
+  Ocuppation,
   ScrollDown,
-  Industry,
-  Flag,
+  Location,
+  EmojiWithoutAnimation,
 } from "./styles";
 
 
@@ -17,73 +17,79 @@ export function Career() {
     <Container>
       <ContentWrapper>
         <CareerDescriptionContainer>
-          <Flag>🚩</Flag>
-          <Industry>
+          <EmojiWithoutAnimation>🚩</EmojiWithoutAnimation>
+          <Location>
             Bairro da juventude - CEP
-          </Industry>
+          </Location>
 
-          <WorkDescription>
+          <Ocuppation>
             Curso técnico
-          </WorkDescription>
+          </Ocuppation>
 
-          <Languages>
+          <Time>
             <p>
               <i>2018. </i>
             </p>
-          </Languages>
+          </Time>
         </CareerDescriptionContainer>
+
         <CareerDescriptionContainer>
-          <Flag>🏫</Flag>
-          <Industry>
+          <EmojiWithoutAnimation>🏫</EmojiWithoutAnimation>
+          <Location>
             CEDUP
-          </Industry>
+          </Location>
 
-          <WorkDescription>
+          <Ocuppation>
             Curso técnico
-          </WorkDescription>
+          </Ocuppation>
 
-          <Languages>
+          <Time>
             <p>
               <i>2019 - 2021. </i>
             </p>
-          </Languages>
+          </Time>
         </CareerDescriptionContainer>
-      </ContentWrapper>
-      <ContentWrapper>
-        <CareerDescriptionContainer>
-          <Flag>🏫</Flag>
-          <Industry>
-            Rocketseat
-          </Industry>
 
-          <WorkDescription>
+      </ContentWrapper>
+
+      <ContentWrapper>
+
+        <CareerDescriptionContainer>
+          <EmojiWithoutAnimation>🏫</EmojiWithoutAnimation>
+          <Location>
+            Rocketseat
+          </Location>
+
+          <Ocuppation>
             Curso de React <br />
             &amp; React-native
-          </WorkDescription>
+          </Ocuppation>
 
-          <Languages>
+          <Time>
             <p>
               <i>2021 - Hoje </i>
             </p>
-          </Languages>
+          </Time>
         </CareerDescriptionContainer>
-        <CareerDescriptionContainer>
-          <Rocket>🚀</Rocket>
-          <Industry>
-            AGPR5
-          </Industry>
 
-          <WorkDescription>
+        <CareerDescriptionContainer>
+          <EmojiWithAnimation>🚀</EmojiWithAnimation>
+          <Location>
+            AGPR5
+          </Location>
+
+          <Ocuppation>
             Dev. front-end <br />
             &amp; mobile
-          </WorkDescription>
+          </Ocuppation>
 
-          <Languages>
+          <Time>
             <p>
               <i>Nov. 2021 - Hoje </i>
             </p>
-          </Languages>
+          </Time>
         </CareerDescriptionContainer>
+
       </ContentWrapper>
 
     </Container>

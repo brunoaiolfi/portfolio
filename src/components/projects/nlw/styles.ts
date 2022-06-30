@@ -8,6 +8,14 @@ export const Container = styled.div`
 
   width: 100%;
   height: 100%;
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    font-size: 2rem;
+
+    height: calc(100vh - 5rem);
+  }
+
 `;
 
 export const ContentWrapper = styled.div`
@@ -24,11 +32,20 @@ export const MessageContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
 `;
 
 export const EventsTitle = styled.p`
   font-size: 2rem;
   font-weight: bold;
+
 `;
 
 export const EventsDescription = styled.h1`
@@ -37,6 +54,20 @@ export const EventsDescription = styled.h1`
 
   span {
     color: var(--yellow_500)
+  }
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    font-size: 2rem;
   }
 `;
 
@@ -54,6 +85,13 @@ export const RepositoryList = styled.section`
 
     a {
       color: var(--cyan_500);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    p {
+      margin-left: 0;
     }
   }
 `;

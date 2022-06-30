@@ -1,19 +1,20 @@
 import styled from "styled-components";
-interface ContactButtonProps {
-  contactType: "email" | "whatsapp";
-}
+import { ContactButtonProps } from ".";
 
-export const Button = styled.button<ContactButtonProps>`
+type ContactButtonContainerProps = Omit<ContactButtonProps, "icon" | "link">;
+
+export const Button = styled.a<ContactButtonContainerProps>`
   position: relative;
 
-  width: 30rem;
-  height: 5rem;
-
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 35px;
 
-  background-color: ${({ contactType }) =>
-    contactType === "email" ? "#DB4437" : "#25D366"};
+  background: ${({ contactType }) =>
+    contactType === "email"
+      ? "#DB4437"
+      : contactType === "whatsapp"
+      ? "#25D366"
+      : "#ffff"};
 
   font-size: 1rem;
   color: var(--white);
@@ -28,29 +29,29 @@ export const Button = styled.button<ContactButtonProps>`
   transition: 1s all ease;
 
   :hover {
-    animation: goRight 350ms forwards;
+    animation: goTop 350ms forwards;
   }
 
   :not(:hover) {
     animation: return 1000ms forwards;
   }
 
-  @keyframes goRight {
+  @keyframes goTop {
     0% {
-      transform: translateX(3%);
+      transform: translatey(-0.25rem);
     }
     50%,
     100% {
-      transform: translateX(10%);
+      transform: translatey(-0.5rem);
     }
   }
 
   @keyframes return {
     100% {
-      transform: translateX(0);
+      transform: translatey(0);
     }
     0% {
-      transform: translateX(10%);
+      transform: translatey(-0.5rem);
     }
   }
 `;
@@ -64,15 +65,9 @@ export const ContactIconContainer = styled.div`
   justify-content: center;
 
   border-radius: 50%;
-  background-color: var(--white);
 `;
 
 export const ContactIcon = styled.img`
   width: 75%;
   height: 75%;
-`;
-
-export const Contact = styled.h1`
-  font-size: 1.25rem;
-  font-weight: 500;
 `;

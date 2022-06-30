@@ -27,7 +27,7 @@ export function Skills() {
       ]
     },
     {
-      title: "React",
+      title: "React Native",
       image: "https://www.w3schools.com/howto/img_avatar.png",
       description: [
         true,
@@ -36,30 +36,48 @@ export function Skills() {
       ]
     },
     {
-      title: "React",
+      title: "Node",
       image: "https://www.w3schools.com/howto/img_avatar.png",
       description: [
         true,
         false,
+        false
+      ]
+    },
+    {
+      title: "Next",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
+      description: [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      title: "Prisma",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
+      description: [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      title: "MySql",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
+      description: [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      title: "Figma",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
+      description: [
+        true,
+        true,
         true
-      ]
-    },
-    {
-      title: "React",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
-      description: [
-        true,
-        true,
-        false
-      ]
-    },
-    {
-      title: "React",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
-      description: [
-        true,
-        true,
-        false
       ]
     },
   ]
@@ -79,9 +97,6 @@ export function Skills() {
 
           )
         }
-
-
-
       </ContentWrapper>
     </Container>
   );

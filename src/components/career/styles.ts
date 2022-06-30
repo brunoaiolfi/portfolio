@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: space-around;
 
   width: 100%;
   height: 100%;
@@ -16,9 +17,10 @@ export const ContentWrapper = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  height: 100%;
+  height: auto;
 
   margin-bottom: -6rem;
+
 `;
 
 export const CareerDescriptionContainer = styled.section`
@@ -27,19 +29,48 @@ export const CareerDescriptionContainer = styled.section`
   flex-direction: column;
 
   gap: 1rem;
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    gap: 0.5rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    gap: 0.5rem;
+  }
 `;
 
-export const Industry = styled.p`
+export const Location = styled.p`
   font-size: 2rem;
   color: var(--cyan_500);
   font-weight: bold;
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+     font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+     font-size: 1.5rem;
+  }
 `;
 
-export const Flag = styled.span`
+export const EmojiWithoutAnimation = styled.span`
   font-size: 3rem;
-  
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    font-size: 2rem;
+  }
 `;
-export const Rocket = styled.span`
+export const EmojiWithAnimation = styled.span`
   font-size: 3rem;
   animation: rocket 1.8s ease-in-out 0s infinite;
 
@@ -52,17 +83,35 @@ export const Rocket = styled.span`
       transform: rotate(0.01turn);
     }
   }
+
+  font-size: 3rem;
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+    font-size: 2rem;
+  }
 `;
-export const WorkDescription = styled.h1`
+export const Ocuppation = styled.h1`
   font-size: 4rem;
   font-weight: bold;
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+     font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+     font-size: 2rem;
+  }
 `;
 
-export const Languages = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-
+export const Time = styled.section`
   color: var(--gray_500);
   font-weight: 500;
   font-size: 1.25rem;
@@ -70,6 +119,17 @@ export const Languages = styled.section`
   p {
     margin-left: 2rem;
   }
+
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+     font-size: 1rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
+     font-size: 1rem;
+  }
+
 `;
 
 export const ScrollDown = styled.div`

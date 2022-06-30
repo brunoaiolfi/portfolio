@@ -1,6 +1,5 @@
 import {
 Button,
-    Contact,
     ContactIcon,
 ContactIconContainer
 
@@ -8,20 +7,16 @@ ContactIconContainer
 
 export interface ContactButtonProps {
     contactType: "email" | "whatsapp";
-    contact: string;
     icon: string;
-    onClick: () => void;
+    link: string;
 }
 
-export function ContactButton({ contact, contactType, icon, onClick }: ContactButtonProps) {
+export function ContactButton({  contactType, icon, link }: ContactButtonProps) {
     return (
-        <Button contactType={contactType} onClick={onClick}>
+        <Button href={link} contactType={contactType}>
             <ContactIconContainer>
                 <ContactIcon src={icon} alt={contactType}/>
             </ContactIconContainer>
-            <Contact>
-                {contact}
-            </Contact>
         </Button>
     )
 

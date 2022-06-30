@@ -41,15 +41,7 @@ export const Container = styled.div`
     @media only screen and (max-width: 1040px) {
       /* For laptop: */
       article {
-        position: absolute;
-
-        top: 4.9rem;
-
-        background-color: var(--gray_900);
-
-        width: 100%;
-
-        padding: 0 5%;
+        display: none;
       }
     }
 
@@ -57,15 +49,18 @@ export const Container = styled.div`
       /* For tablets: */
 
       article {
-        position: absolute;
+        display: none;
+      }
+    }
 
-        top: 4.9rem;
+    @media only screen and (min-width: 600px) {
+      /* For phone: */
 
-        background-color: var(--gray_900);
-
-        width: 100%;
-
-        padding: 0 5%;
+      h1 {
+        font-size: 1rem;
+      }
+      article {
+        display: none;
       }
     }
   }
