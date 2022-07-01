@@ -9,6 +9,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   align-items: center;
+
+  padding: 1rem;
 `;
 
 export const ContentWrapper = styled.div`

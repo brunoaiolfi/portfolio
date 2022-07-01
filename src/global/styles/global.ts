@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
 *  {
     margin: 0;
     padding: 0;
@@ -9,16 +10,16 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 :root {
-    --white: #ffffff;
+    --white: ${({theme}) => theme.colors.white };
 
-    --gray_100: #e1e1e6;
-    --gray_500: #a8a8b3;
-    --gray_600: #29292e;
-    --gray_700: #4F4F4F;
-    --gray_900: #121214;
+    --gray_100: ${({ theme }) => theme.colors.gray_100};
+    --gray_500: ${({ theme }) => theme.colors.gray_500};
+    --gray_600: ${({ theme }) => theme.colors.gray_600};
+    --gray_700: ${({ theme }) => theme.colors.gray_700};
+    --gray_900: ${({ theme }) => theme.colors.gray_900};
 
-    --cyan_500: #61dafb;
-    --yellow_500: #eba417;
+    --cyan_500: ${({ theme }) => theme.colors.cyan_500};
+    --yellow_500: ${({ theme }) => theme.colors.yellow_500};
 
 
 }
@@ -29,7 +30,7 @@ body, select, input, textarea, button {
 
 body {
     background-color: var(--gray_900);
-    color: var(--white);
+    color: var(--gray_100);
 }
 button {
     cursor: pointer;

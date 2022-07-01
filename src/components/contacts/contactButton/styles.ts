@@ -17,7 +17,7 @@ export const Button = styled.a<ContactButtonContainerProps>`
       : "#ffff"};
 
   font-size: 1rem;
-  color: var(--white);
+  color: var(--gray_100);
 
   display: flex;
   align-items: center;

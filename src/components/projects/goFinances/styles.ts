@@ -94,7 +94,7 @@ export const ProjectTitle = styled.h1`
 
 export const ProjectText = styled.h1`
   font-size: 1rem;
-  color: var(--white);
+  color: var(--gray_100);
 
   span {
     color: var(--cyan_500);
@@ -169,7 +169,7 @@ export const SwipeDescriptionContainer = styled.div`
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--white);
+  color: var(--gray_100);
 
   span {
     font-size: 1.5rem;

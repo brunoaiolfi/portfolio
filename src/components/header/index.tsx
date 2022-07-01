@@ -1,34 +1,33 @@
-import { Container, SectionHeader } from "./styles";
+import { useChangeTheme } from "../../hooks/useChangeTheme";
+import { ButtonGroup, ChangeThemeButton, Container, ContentWrapper, Name } from "./styles";
 
-interface headerProps {
-  pageOnView: "welcome" | "projects" | "skills" | "carrer" | "contact";
-}
+export function Header() {
 
-export function Header({ pageOnView }: headerProps) {
+  const { theme, setTheme } = useChangeTheme()
+
+  function handleChangeTheme() {
+    if (theme === 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
   return (
     <Container>
-      <header>
-        <h1>Bruno Aiolfi</h1>
 
-        <article>
-          <SectionHeader href="#" isSelected={pageOnView === "welcome"}>
-            <p>Boas-vindas!</p>
-          </SectionHeader>
-          <SectionHeader href="#" isSelected={pageOnView === "projects"}>
-            <p>Projetos &amp; participações</p>
-          </SectionHeader>
-          <SectionHeader href="#" isSelected={pageOnView === "skills"}>
-            <p>My Skills</p>
-          </SectionHeader>
-          <SectionHeader href="#" isSelected={pageOnView === "carrer"}>
-            <p>Carreira</p>
-          </SectionHeader>
-          <SectionHeader href="#" isSelected={pageOnView === "contact"}>
-            <p>Contato</p>
-          </SectionHeader>
-        </article>
+      <ContentWrapper>
+        <Name>Bruno Aiolfi</Name>
 
-      </header>
+        <ButtonGroup>
+          <ChangeThemeButton onClick={() => handleChangeTheme()}>
+            <span>
+              Theme
+            </span>
+          </ChangeThemeButton>
+        </ButtonGroup>
+
+      </ContentWrapper>
+
     </Container>
   );
 }

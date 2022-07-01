@@ -9,6 +9,12 @@ export const Container = styled.div`
 
   width: 100%;
   height: 100%;
+  
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    gap: 1.5rem;
+
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -19,8 +25,18 @@ export const ContentWrapper = styled.div`
   width: 100%;
   height: auto;
 
-  margin-bottom: -6rem;
 
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.5rem;
+
+  }
 `;
 
 export const CareerDescriptionContainer = styled.section`
@@ -48,12 +64,12 @@ export const Location = styled.p`
 
   @media only screen and (max-width: 1040px) {
     /* For laptop: */
-     font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   @media only screen and (max-width: 800px) {
     /* For tablets: */
-     font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -102,12 +118,12 @@ export const Ocuppation = styled.h1`
 
   @media only screen and (max-width: 1040px) {
     /* For laptop: */
-     font-size: 2rem;
+    font-size: 2rem;
   }
 
   @media only screen and (max-width: 800px) {
     /* For tablets: */
-     font-size: 2rem;
+    font-size: 2rem;
   }
 `;
 
@@ -122,14 +138,13 @@ export const Time = styled.section`
 
   @media only screen and (max-width: 1040px) {
     /* For laptop: */
-     font-size: 1rem;
+    font-size: 1rem;
   }
 
   @media only screen and (max-width: 800px) {
     /* For tablets: */
-     font-size: 1rem;
+    font-size: 1rem;
   }
-
 `;
 
 export const ScrollDown = styled.div`

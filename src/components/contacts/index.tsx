@@ -19,7 +19,7 @@ export function Contacts() {
     {
       contactType: 'whatsapp',
       icon: 'https://img.icons8.com/color/48/000000/whatsapp.png',
-      link: 'https://wa.me/88060117',
+      link: 'https://wa.me/+5548988060117',
     },
    
   ]

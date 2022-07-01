@@ -14,85 +14,118 @@ export const Container = styled.div`
 
   background-color: var(--gray_900);
   border-bottom: 1px solid var(--gray_600);
+`;
 
-  header {
-    width: 100%;
+export const Name = styled.h1`
+  h1 {
+    font-size: 1.5rem;
 
-    max-width: 1080px;
+    margin-left: 5%;
+  }
+`;
 
-    height: 100%;
+export const ContentWrapper = styled.header`
+  height: 100%;
+  width: 100%;
+  max-width: 1080px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    h1 {
-      font-size: 1.5rem;
+  padding: 0 1rem;
 
-      margin-left: 5%;
+  @media only screen and (max-width: 1040px) {
+    /* For laptop: */
+    article {
+      display: none;
     }
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* For tablets: */
 
     article {
-      height: 100%;
-      display: flex;
-      gap: 1rem;
+      display: none;
     }
+  }
 
-    @media only screen and (max-width: 1040px) {
-      /* For laptop: */
-      article {
-        display: none;
-      }
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+
+    h1 {
+      font-size: 1rem;
     }
-
-    @media only screen and (max-width: 800px) {
-      /* For tablets: */
-
-      article {
-        display: none;
-      }
-    }
-
-    @media only screen and (min-width: 600px) {
-      /* For phone: */
-
-      h1 {
-        font-size: 1rem;
-      }
-      article {
-        display: none;
-      }
+    article {
+      display: none;
     }
   }
 `;
 
-export const SectionHeader = styled.a<IsSelected>`
+export const ButtonGroup = styled.section`
+  height: 100%;
   display: flex;
   align-items: center;
+  gap: 1rem;
+`;
 
-  height: 100%;
+export const ChangeThemeButton = styled.button`
+  width: 2rem;
+  height: 2rem;
 
-  border-bottom: 0px solid var(--yellow_500);
-  border-bottom-width: ${({ isSelected }) => (isSelected ? "4px" : 0)};
-  border-radius: 8px 8px 0 0;
+  border: 1px solid var(--white);
+  border-radius: 24px;
 
-  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  p {
+  cursor: pointer;
+
+  text-transform: uppercase;
+
+  outline: none;
+  overflow: hidden;
+  position: relative;
+
+  background-color: var(--gray_900);
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  span {
     font-size: 1rem;
     font-weight: bold;
+    color: var(--gray_100);
 
-    color: ${({ isSelected }) => (isSelected ? "#eba417" : "#ffff")};
+    position: relative;
+    z-index: 999999999;
 
-    transition: all 0.3s;
+    transition: all 0.5s ease-in-out;
+  }
+
+  :after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: var(--gray_100);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
   }
 
   :hover {
-    p {
-      font-size: 1rem;
-      font-weight: bold;
-
-      color: var(--yellow_500);
+    span {
+      color: var(--gray_900);
     }
+  }
+
+  :hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
   }
 `;

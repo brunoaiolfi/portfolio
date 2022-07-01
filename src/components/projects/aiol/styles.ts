@@ -75,7 +75,7 @@ export const ProjectTitle = styled.h1`
 
 export const ProjectText = styled.h1`
   font-size: 1rem;
-  color: var(--white);
+  color: var(--gray_100);
 
   span {
     color: var(--cyan_500);

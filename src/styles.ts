@@ -5,13 +5,17 @@ export const Container = styled.div`
   height: 100vh;
 
   overflow-x: hidden;
-
 `;
 
 export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   z-index: 999;
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    display: none;
+  }
 `;
 
 export const BodyContainer = styled.div`
@@ -23,7 +27,6 @@ export const BodyContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  
   @media only screen and (max-width: 1040px) {
     /* For laptop: */
     padding: 0 24px;
@@ -36,7 +39,6 @@ export const BodyContainer = styled.div`
     /* For phone: */
     padding: 0 24px;
   }
-
 `;
 
 export const PageContainer = styled.article`
@@ -45,13 +47,13 @@ export const PageContainer = styled.article`
   height: calc(100vh - 5rem);
 
   padding: 1rem 0;
+  scroll-behavior: smooth;
 
   @media only screen and (max-width: 600px) {
     /* For phone: */
     height: auto;
-    min-height: calc(100vh - 5rem);
+    min-height: 100vh;
   }
-
 `;
 
 export const FooterWrapper = styled.section`
@@ -60,7 +62,7 @@ export const FooterWrapper = styled.section`
 
   margin-top: 5rem;
   border-top: 1px solid var(--gray_600);
-  
+
   display: flex;
   align-items: center;
   justify-content: center;

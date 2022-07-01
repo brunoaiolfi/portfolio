@@ -89,7 +89,7 @@ export const Languages = styled.section`
   gap: 0.25rem;
 
   color: var(--gray_500);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.25rem;
 
   p {
