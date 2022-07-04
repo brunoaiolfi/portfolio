@@ -15,7 +15,6 @@ export const Container = styled.div`
 
     height: calc(100vh - 5rem);
   }
-
 `;
 
 export const ContentWrapper = styled.div`
@@ -25,7 +24,6 @@ export const ContentWrapper = styled.div`
 
   width: 100%;
   height: 100%;
-
 `;
 
 export const MessageContainer = styled.section`
@@ -39,13 +37,11 @@ export const MessageContainer = styled.section`
     justify-content: center;
     text-align: center;
   }
-
 `;
 
 export const EventsTitle = styled.p`
   font-size: 2rem;
   font-weight: bold;
-
 `;
 
 export const EventsDescription = styled.h1`
@@ -53,7 +49,7 @@ export const EventsDescription = styled.h1`
   font-weight: bold;
 
   span {
-    color: var(--yellow_500)
+    color: var(--yellow_500);
   }
 
   @media only screen and (max-width: 1040px) {
@@ -72,27 +68,17 @@ export const EventsDescription = styled.h1`
 `;
 
 export const RepositoryList = styled.section`
+  width: 100%;
+
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
 
-  color: var(--gray_500);
-  font-weight: 500;
-  font-size: 1.25rem;
-
-  p {
-    margin-left: 2rem;
-
-    a {
-      color: var(--cyan_500);
-    }
-  }
-
+  gap: 2rem;
+  margin-top: 2.5rem;
   @media only screen and (max-width: 600px) {
     /* For phone: */
-    p {
-      margin-left: 0;
-    }
+    flex-direction: column;
   }
 `;
 
@@ -124,7 +110,7 @@ export const ScrollDown = styled.div`
   @keyframes drop {
     from {
       opacity: 1;
-      top: .75rem;
+      top: 0.75rem;
     }
     to {
       opacity: 0;

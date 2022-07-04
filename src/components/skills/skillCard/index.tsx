@@ -1,4 +1,4 @@
-import { DescriptionList, DescriptionListContainer, Image, SkillCardContainer, Title } from "./styles";
+import { DescriptionList, HabilityLevel, Image, SkillCardContainer, Title } from "./styles";
 
 export interface SkillCardProps {
     title: string;
@@ -10,17 +10,18 @@ export function SkillCard({ description, image, title, }: SkillCardProps) {
 
     return (
         <SkillCardContainer>
+            {/* Habilidade */}
             <Title>{title}</Title>
-            <Image src={image} alt={title+'img'} />
-
-            <DescriptionListContainer>
-
+            {/* Imagem */}
+            <Image src={image} alt={title + 'img'} />
+            {/* Nível de habilidade */}
+            <HabilityLevel>
                 {
                     description.map(item =>
                         <DescriptionList isActivated={item} />
                     )
                 }
-            </DescriptionListContainer>
+            </HabilityLevel>
         </SkillCardContainer>
     )
 }

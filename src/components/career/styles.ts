@@ -39,7 +39,7 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const CareerDescriptionContainer = styled.section`
+export const StepOfCareer = styled.section`
   display: flex;
 
   flex-direction: column;

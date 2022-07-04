@@ -7,10 +7,28 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
+
+}
+
+::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.45rem;
+
+}
+
+::-webkit-scrollbar-track {
+    margin-top: 5rem;
+    background: var(--gray_900);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray_500);
+    border-radius: 0.5rem;
+    transition: background 0.4s ease-in;
 }
 
 :root {
-    --white: ${({theme}) => theme.colors.white };
+    --white: ${({ theme }) => theme.colors.white};
 
     --gray_100: ${({ theme }) => theme.colors.gray_100};
     --gray_500: ${({ theme }) => theme.colors.gray_500};

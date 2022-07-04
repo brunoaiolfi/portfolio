@@ -4,7 +4,7 @@ import {
   ContentWrapper,
   EmojiWithAnimation,
   Time,
-  CareerDescriptionContainer,
+  StepOfCareer,
   Ocuppation,
   ScrollDown,
   Location,
@@ -15,8 +15,11 @@ import {
 export function Career() {
   return (
     <Container>
+
+      {/* Wrapper de etapas da carreira */}
       <ContentWrapper>
-        <CareerDescriptionContainer>
+
+        <StepOfCareer>
           <EmojiWithoutAnimation>🚩</EmojiWithoutAnimation>
           <Location>
             Bairro da juventude - CEP
@@ -31,9 +34,9 @@ export function Career() {
               <i>2018. </i>
             </p>
           </Time>
-        </CareerDescriptionContainer>
+        </StepOfCareer>
 
-        <CareerDescriptionContainer>
+        <StepOfCareer>
           <EmojiWithoutAnimation>🏫</EmojiWithoutAnimation>
           <Location>
             CEDUP
@@ -48,13 +51,14 @@ export function Career() {
               <i>2019 - 2021. </i>
             </p>
           </Time>
-        </CareerDescriptionContainer>
+        </StepOfCareer>
 
       </ContentWrapper>
 
+      {/* Wrapper de etapas da carreira */}
       <ContentWrapper>
 
-        <CareerDescriptionContainer>
+        <StepOfCareer>
           <EmojiWithoutAnimation>🏫</EmojiWithoutAnimation>
           <Location>
             Rocketseat
@@ -70,9 +74,9 @@ export function Career() {
               <i>2021 - Hoje </i>
             </p>
           </Time>
-        </CareerDescriptionContainer>
+        </StepOfCareer>
 
-        <CareerDescriptionContainer>
+        <StepOfCareer>
           <EmojiWithAnimation>🚀</EmojiWithAnimation>
           <Location>
             AGPR5
@@ -88,7 +92,7 @@ export function Career() {
               <i>Nov. 2021 - Hoje </i>
             </p>
           </Time>
-        </CareerDescriptionContainer>
+        </StepOfCareer>
 
       </ContentWrapper>
 

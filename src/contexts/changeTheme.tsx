@@ -3,29 +3,26 @@ import { createContext, SetStateAction, useEffect, useState } from 'react';
 
 interface ChangeThemeReturn {
     theme: string,
-    setTheme: (value: SetStateAction<string>) => void;
+    handleSetTheme: (value: 'light' | 'dark') => void;
 }
 
 export const ChangeThemeContext = createContext({} as ChangeThemeReturn)
 
 export function ChangeThemeProvider({ children }: ChildrenContextProps) {
 
-    const [theme, setTheme] = useState('light');
-
-    // Pega o tema salvo no localStorage
-    useEffect(() => {
-        // Caso não possua um salvo, usa o light
-        const savedTheme = localStorage.getItem('@theme') || 'ligth';
-        setTheme(savedTheme)
-    }, []);
+    const [theme, setTheme] = useState<string>(localStorage.getItem('@theme') || 'dark');
 
     useEffect(() => {
-        // Pega o tema salvo no localStorage
+        // Salva o tema no localStorage
         localStorage.setItem('@theme', theme);
     }, [theme]);
 
+    function handleSetTheme(value: 'light' | 'dark') {
+        setTheme(value)
+    }
+
     return (
-        <ChangeThemeContext.Provider value={{ setTheme, theme }}>
+        <ChangeThemeContext.Provider value={{ handleSetTheme, theme }}>
             {children}
         </ChangeThemeContext.Provider>
     )

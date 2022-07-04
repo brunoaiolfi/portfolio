@@ -1,0 +1,169 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Career } from "./components/career";
+import { Contacts } from "./components/contacts";
+import { Header } from "./components/header";
+import { Aiol } from "./components/projects/aiol";
+import { GoFinances } from "./components/projects/goFinances";
+import { Nlw } from "./components/projects/nlw";
+import { Skills } from "./components/skills";
+import { Welcome } from "./components/welcome";
+import { GlobalStyle } from "./global/styles/global";
+import "./global/styles/global.ts";
+import {
+  BodyContainer,
+  Container,
+  FooterWrapper,
+  HeaderContainer,
+  PageContainer,
+} from "./styles";
+import { PageOnView } from "./types/pageInUse";
+
+
+function App() {
+
+  const welcomeRef = useRef<HTMLElement | null>(null)
+  const projectGoFinancesRef = useRef<HTMLElement | null>(null)
+  const projectAiolRef = useRef<HTMLElement | null>(null)
+  const projectNlwRef = useRef<HTMLElement | null>(null)
+  const careerRef = useRef<HTMLElement | null>(null)
+  const skillsRef = useRef<HTMLElement | null>(null)
+  const contactsRef = useRef<HTMLElement | null>(null)
+
+  const [pageInUse, setPageInUse] = useState<PageOnView>('Welcome')
+
+  function handleScroll(direction: number) {
+    if (direction === 100)
+      navigateToPage('Down')
+    else
+      navigateToPage('Up')
+  }
+
+  function navigateToPage(direction: 'Up' | 'Down') {
+    switch (pageInUse) {
+      case 'Welcome':
+        if (direction === 'Down') {
+          projectGoFinancesRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('GoFinances')
+          
+        }
+        break;
+
+      case 'GoFinances':
+        if (direction === 'Down') {
+          projectAiolRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Aiol')
+        }
+        else {
+          welcomeRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Welcome')
+        }
+        break;
+
+      case 'Aiol':
+        if (direction === 'Down') {
+          projectNlwRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Nlw')
+        }
+        else {
+          projectGoFinancesRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('GoFinances')
+        }
+        break;
+
+      case 'Nlw':
+        if (direction === 'Down') {
+          skillsRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Skills')
+        }
+        else {
+          projectAiolRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Aiol')
+        }
+        break;
+
+      case 'Skills':
+        if (direction === 'Down') {
+          careerRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Career')
+        }
+        else {
+          projectNlwRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Nlw')
+        }
+        break;
+
+      case 'Career':
+        if (direction === 'Down') {
+          contactsRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Contacts')
+        }
+        else {
+          skillsRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Skills')
+        }
+        break;
+
+      case 'Contacts':
+        if (direction === 'Up') {
+          careerRef.current?.scrollIntoView({ behavior: 'smooth' })
+          setPageInUse('Career')
+        }
+
+        break;
+
+      default:
+        break;
+    }
+
+
+  }
+
+  return (
+
+    <Container onWheel={e => handleScroll(e.deltaY)}>
+
+      <GlobalStyle />
+
+      <HeaderContainer >
+        <Header pageOnView={pageInUse} />
+      </HeaderContainer>
+
+      <BodyContainer>
+
+        <PageContainer ref={welcomeRef} id={'Welcome'}>
+          <Welcome />
+        </PageContainer>
+
+
+        <PageContainer ref={projectGoFinancesRef} id={'goFinances'}>
+          <GoFinances />
+        </PageContainer>
+
+        <PageContainer ref={projectAiolRef}>
+          <Aiol />
+        </PageContainer>
+
+        <PageContainer ref={projectNlwRef}>
+          <Nlw />
+        </PageContainer>
+
+        <PageContainer ref={skillsRef}>
+          <Skills />
+        </PageContainer>
+
+        <PageContainer ref={careerRef}>
+          <Career />
+        </PageContainer>
+
+
+      </BodyContainer>
+
+      <FooterWrapper ref={contactsRef}>
+        <Contacts />
+      </FooterWrapper>
+
+    </Container>
+  );
+}
+
+export default App;

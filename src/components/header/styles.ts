@@ -89,8 +89,8 @@ export const ChangeThemeButton = styled.button`
   position: relative;
 
   background-color: var(--gray_900);
-  padding: 17px 60px;
-  margin: 0 auto;
+  padding: 1rem 3.75rem;
+
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
   span {
@@ -106,16 +106,23 @@ export const ChangeThemeButton = styled.button`
 
   :after {
     content: "";
+
     position: absolute;
     left: 0;
     top: 0;
+    
     height: 490%;
-    width: 140%;
+    width: 120%;
+
     background: var(--gray_100);
-    -webkit-transition: all 0.5s ease-in-out;
+
     transition: all 0.5s ease-in-out;
-    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+
     transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    
+    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    
   }
 
   :hover {
@@ -127,5 +134,24 @@ export const ChangeThemeButton = styled.button`
   :hover:after {
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
     transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
+`;
+
+export const GithubButton = styled.a`
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+
+  background-image: url("../../assets/images/github.png");
+  background-repeat: no-repeat;
+
+  background-color: #fff;
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 `;

@@ -92,7 +92,7 @@ export const ProjectTitle = styled.h1`
   }
 `;
 
-export const ProjectText = styled.h1`
+export const ProjectDescription = styled.h1`
   font-size: 1rem;
   color: var(--gray_100);
 
@@ -143,6 +143,7 @@ export const CarouselCard = styled.img`
   width: auto;
 
   margin-right: 3rem;
+  border: 1px solid var(--gray_500);
   border-radius: 1rem;
 
   @media only screen and (max-width: 1040px) {

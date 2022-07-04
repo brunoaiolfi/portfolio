@@ -16,10 +16,11 @@ import {
 
 export function Skills() {
 
+  // Constante com as minhas habilidades
   const skills: SkillCardProps[] = [
     {
       title: "React",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       description: [
         true,
         true,
@@ -28,7 +29,7 @@ export function Skills() {
     },
     {
       title: "React Native",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       description: [
         true,
         true,
@@ -36,7 +37,7 @@ export function Skills() {
       ]
     },
     {
-      title: "Node",
+      title: "Next",
       image: "https://www.w3schools.com/howto/img_avatar.png",
       description: [
         true,
@@ -45,8 +46,8 @@ export function Skills() {
       ]
     },
     {
-      title: "Next",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
+      title: "Node",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       description: [
         true,
         false,
@@ -64,7 +65,7 @@ export function Skills() {
     },
     {
       title: "MySql",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       description: [
         true,
         false,
@@ -73,7 +74,7 @@ export function Skills() {
     },
     {
       title: "Figma",
-      image: "https://www.w3schools.com/howto/img_avatar.png",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
       description: [
         true,
         true,
@@ -81,17 +82,21 @@ export function Skills() {
       ]
     },
   ]
+
   return (
     <Container>
+      {/* Título */}
       <TitleWrapper>
         <Title>My Skills</Title>
       </TitleWrapper>
 
+      {/* Lista de habilidades */}
       <ContentWrapper>
         {
           skills.map(({ description, image, title }, index) =>
 
             <SkillCardContainer>
+              {/* Componente de card de habilidade */}
               <SkillCard description={description} image={image} title={title} key={index} />
             </SkillCardContainer>
 

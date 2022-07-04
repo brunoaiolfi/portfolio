@@ -10,6 +10,7 @@ import {
 
 
 export function Contacts() {
+  // Lista de contatos
   const contactsList: ContactButtonProps[] = [
     {
       contactType: 'email',
@@ -26,6 +27,7 @@ export function Contacts() {
 
   return (
     <Container>
+      {/* Título */}
       <TitleWrapper>
         <Phone>☎️</Phone>
         <Title>
@@ -34,7 +36,6 @@ export function Contacts() {
       </TitleWrapper>
 
       <ContactsButtonContainer>
-
         {
           contactsList.map(({
              contactType, icon, link

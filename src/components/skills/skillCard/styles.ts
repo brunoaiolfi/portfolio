@@ -7,6 +7,7 @@ export const SkillCardContainer = styled.div`
   height: 100%;
 
   border: 1px solid var(--gray_500);
+  
   border-radius: 0.5rem;
 
   display: flex;
@@ -43,7 +44,7 @@ export const Image = styled.img`
   }
 `;
 
-export const DescriptionListContainer = styled.div`
+export const HabilityLevel = styled.div`
   width: 100%;
   height: auto;
 

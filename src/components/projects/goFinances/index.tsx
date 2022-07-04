@@ -16,7 +16,7 @@ import {
   CarouselContainer,
   Container,
   ContentWrapper,
-  ProjectText,
+  ProjectDescription,
   ProjectTitle,
   ProjectWrapper as ProjectDescriptionWrapper,
   SwipeDescriptionContainer,
@@ -26,19 +26,43 @@ import {
 
 
 export function GoFinances() {
+  const Images = [
+    {
+      imageUrl: Resume,
+    },
+    {
+      imageUrl: Register,
+    },
+    {
+      imageUrl: Dashboard,
+    },
+
+  ]
+
   return (
     <Container>
+
+      {/* Título */}
       <TitleWrapper>
         <Title>Meus projetos &amp; participações</Title>
       </TitleWrapper>
 
+      {/* Container do conteúdo */}
       <ContentWrapper>
+
+        {/* Container da descrição do projeto */}
         <ProjectDescriptionWrapper>
+
+          {/* Título do projeto */}
           <ProjectTitle>goFinances</ProjectTitle>
-          <ProjectText>
+
+          {/* Descrição do projeto */}
+          <ProjectDescription>
             Controle suas finanças na <br />
             <b>palma da sua mão.</b> <br />
             <br />
+
+            {/* Link para o repositório */}
             <span>
               👉{" "}
               <a href="https://github.com/brunoaiolfi/goFinances">
@@ -46,27 +70,34 @@ export function GoFinances() {
               </a>{" "}
               👈
             </span>
-          </ProjectText>
+          </ProjectDescription>
         </ProjectDescriptionWrapper>
 
+        {/* Container do Carousel das imagens do projeto */}
         <CarouselContainer>
 
+          {/* Carousel */}
           <Carousel>
-            <SwiperSlide>
-              <CarouselCard src={Resume} />
-            </SwiperSlide>
+            {/*  */}
 
-            <SwiperSlide>
-              <CarouselCard src={Register} />
-            </SwiperSlide>
+            {
+              // Map das imagens
+              Images.map((image, index) => (
 
-            <SwiperSlide>
-              <CarouselCard src={Dashboard} />
-            </SwiperSlide>
+                <SwiperSlide key={index}>
+                  <CarouselCard src={image.imageUrl} />
+                </SwiperSlide>
+              ))
+            }
+
           </Carousel>
 
+          {/* Descrição da ação do carousel */}
           <SwipeDescriptionContainer>
+            {/* Emoji de indicação de ação */}
             <span> 👆 </span>
+
+            {/* Descrição da ação */}
             <h1>
               Passe para o lado<br />
               para ver todas as telas!
