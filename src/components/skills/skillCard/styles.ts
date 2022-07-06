@@ -7,7 +7,7 @@ export const SkillCardContainer = styled.div`
   height: 100%;
 
   border: 1px solid var(--gray_500);
-  
+
   border-radius: 0.5rem;
 
   display: flex;
@@ -17,6 +17,14 @@ export const SkillCardContainer = styled.div`
   justify-content: space-around;
 `;
 
+export const Header = styled.header`
+
+  width: 100%;
+
+
+`;
+
+
 export const Title = styled.h1`
   font-size: 1.5rem;
   text-align: center;
@@ -25,6 +33,30 @@ export const Title = styled.h1`
     /* For phone: */
     font-size: 1rem;
   }
+`;
+
+export const ToolTipButton = styled.div`
+  position: relative;
+
+  top: 10;
+  right: 10;
+  z-index: 999;
+  border-radius: 100%;
+  background: var(--gray_600);
+
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1rem;
+
+    color: var(--gray_100);
+  }
+
 `;
 
 export const Image = styled.img`
@@ -61,7 +93,6 @@ export const HabilityLevel = styled.div`
     justify-content: space-around;
     gap: 0;
   }
-  
 `;
 
 export const DescriptionList = styled.div<isActivated>`

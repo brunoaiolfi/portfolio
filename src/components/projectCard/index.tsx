@@ -14,16 +14,13 @@ export function ProjectCard({
     repositoryLink
 }: ProjectCardProps) {
     return (
-        <Container>
+        <Container href={repositoryLink}>
             <HeaderContainer colorBackgroundHeader={colorBackground}>
                 <ProjectName>{name}</ProjectName>
             </HeaderContainer>
 
             <DescriptionWrapper>
-                <Description>
-                    {description}
-                </Description>
-                <RepositoryLink href={repositoryLink}>/{name}</RepositoryLink>
+                <RepositoryLink >/{name}</RepositoryLink>
             </DescriptionWrapper>
         </Container>
     )

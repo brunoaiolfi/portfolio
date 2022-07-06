@@ -76,6 +76,7 @@ export const RepositoryList = styled.section`
 
   gap: 2rem;
   margin-top: 2.5rem;
+  
   @media only screen and (max-width: 600px) {
     /* For phone: */
     flex-direction: column;

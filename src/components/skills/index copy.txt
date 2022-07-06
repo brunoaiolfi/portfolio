@@ -5,14 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useChangeTheme } from "../../hooks/useChangeTheme";
 import { SkillCard, SkillCardProps } from "./skillCard";
 
-//@ts-ignore
-import NextDark from "../../assets/images/nextjs-icon-dark.png";
-//@ts-ignore
-import NextLight from "../../assets/images/nextjs-icon-light.png";
-//@ts-ignore
-import PrismaDark from "../../assets/images/prismaDark.png";
-//@ts-ignore
-import PrismaLight from "../../assets/images/prismaLight.png";
 
 import {
   Container,
@@ -26,73 +18,7 @@ import {
 export function Skills() {
 
   // Constante com as minhas habilidades
-  const [skills, setSkills] = useState<SkillCardProps[]>(
-    [
-      {
-        title: "React",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        description: [
-          true,
-          true,
-          false
-        ]
-      },
-      {
-        title: "React Native",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        description: [
-          true,
-          true,
-          false,
-        ]
-      },
-      {
-        title: "Next",
-        image: NextDark,
-        description: [
-          true,
-          false,
-          false
-        ]
-      },
-      {
-        title: "Node",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        description: [
-          true,
-          false,
-          false
-        ]
-      },
-      {
-        title: "Prisma",
-        image: PrismaDark,
-        description: [
-          true,
-          false,
-          false
-        ]
-      },
-      {
-        title: "MySql",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-        description: [
-          true,
-          false,
-          false
-        ]
-      },
-      {
-        title: "Figma",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        description: [
-          true,
-          true,
-          true
-        ]
-      },
-    ]
-  )
+  const [skills, setSkills] = useState<SkillCardProps[]>([])
 
   const { theme } = useChangeTheme()
   useEffect(() => {
@@ -119,7 +45,7 @@ export function Skills() {
           },
           {
             title: "Next",
-            image: NextDark,
+            image: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css",
             description: [
               true,
               false,
@@ -137,7 +63,7 @@ export function Skills() {
           },
           {
             title: "Prisma",
-            image: PrismaDark,
+            image: "https://www.w3schools.com/howto/img_avatar.png",
             description: [
               true,
               false,
@@ -187,7 +113,7 @@ export function Skills() {
           },
           {
             title: "Next",
-            image: NextLight,
+            image: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css",
             description: [
               true,
               false,
@@ -205,7 +131,7 @@ export function Skills() {
           },
           {
             title: "Prisma",
-            image: PrismaLight,
+            image: "https://www.w3schools.com/howto/img_avatar.png",
             description: [
               true,
               false,

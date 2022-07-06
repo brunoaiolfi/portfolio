@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface backgroundHeader {
   colorBackgroundHeader: string;
 }
-export const Container = styled.div`
+export const Container = styled.a`
   display: flex;
 
   flex-direction: column;
@@ -11,39 +11,59 @@ export const Container = styled.div`
   justify-content: space-between;
 
   width: 18rem;
-  height: 20rem;
+  height: 15rem;
 
-  border-radius: 8px;
+  padding: 1rem;
+
   border: 1px solid var(--gray_500);
 
-  box-shadow: 0px 8px 8px 0px ${({theme}) => theme.colors.gray_700} ;
+  box-shadow: 0px 8px 8px 0px ${({ theme }) => theme.colors.gray_700};
 
+  transition: all 0.3s ease-in-out;
+
+  cursor: pointer;
+
+  :hover {
+    border: 1px solid var(--yellow_500);
+    box-shadow: 0px 8px 8px 0px ${({ theme }) => theme.colors.yellow_500};
+  }
+  
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    /* flex-direction: column; */
+
+    width: 15rem;
+    height: 12rem;
+  }
+
+ 
 `;
 
 export const HeaderContainer = styled.header<backgroundHeader>`
   width: 100%;
-  height: 50%;
+  height: 100%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: ${({ colorBackgroundHeader }) => colorBackgroundHeader};
-
-  border-radius: 8px 8px 0 0;
 `;
 
 export const ProjectName = styled.h1`
   color: #fff;
 
   font-size: 1.5rem;
+
+  @media only screen and (max-width: 600px) {
+    /* For phone: */
+    font-size: 1rem;
+  }
+
 `;
 
 export const DescriptionWrapper = styled.article`
   width: 100%;
-  height: 60%;
-
-  padding: 0.5rem;
 
   border-top: none;
   border-radius: 0 0 8px 8px;
@@ -53,6 +73,8 @@ export const DescriptionWrapper = styled.article`
 
   align-items: left;
   justify-content: space-between;
+
+  margin-top: 1rem;
 `;
 
 export const Description = styled.h1`
@@ -64,7 +86,7 @@ export const Description = styled.h1`
   text-align: justify;
 `;
 
-export const RepositoryLink = styled.a`
+export const RepositoryLink = styled.p`
   font-size: 1.25rem;
 
   color: var(--cyan_500);
