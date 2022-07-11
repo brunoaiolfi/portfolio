@@ -22,4 +22,4 @@ Além disto, o mesmo possuí algumas funcionalidades como a de troca de tema e r
 
 <h2>Como utilizar: </h2>
   <p> Instale os pacotes utilizados com um <b>npm i</b>.</p>
-  <p> Depois utilize o comando <b> npm start</b>.</p>
+  <p> Depois utilize o comando <b> npm start</b> para iniciar a aplicação.</p>
